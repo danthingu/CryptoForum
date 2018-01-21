@@ -1,0 +1,81 @@
+body {
+  background-color: #000;
+}
+
+#intro-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+
+#intro-header h1 {
+  color: #fff;
+}
+
+.slideshow { 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+  background-image: url(https://news.bitcoin.com/wp-content/uploads/2017/02/How-Much-Does-it-Cost-to-Run-a-Full-Bitcoin-Node.png) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(https://ethereum.org/images/wallpaper-homestead.jpg);
+  animation-delay: 5s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAufnJju1VFCN2INXC5e6HPp0-OnqsjTofD2oHr4RU_MLxV1DV);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(https://www.crypto-economy.net/wp-content/uploads/2017/11/bitcoin-cash.jpg);
+  animation-delay: 15s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4FbK8lJ7_pby0irVO_0VFyk3SOAtRlXT2G2teYA2pDgN8vkS9);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(6) { 
+  background-image: url(http://bitcoinx.io/wp-content/uploads/2015/12/coinbase-charts-1024x542.png);
+  animation-delay: 25s; 
+}
+
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
