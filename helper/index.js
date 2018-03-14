@@ -31,7 +31,7 @@ let checkUserComment = function(req, res, next) {
 				next();
 			} else {
 				req.flash("error", "You don't have permission to do that!");
-                res.redirect("/campgrounds/" + req.params.id);
+                res.redirect("/cryptocurrency/" + req.params.id);
 			}
 		});
 	}	else {
